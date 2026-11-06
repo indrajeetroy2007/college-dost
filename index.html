@@ -101,8 +101,10 @@ button:hover {
     <nav>
         <a href="#home">Home</a>
         <a href="#notes">Notes</a>
+         <a href="#holiday-calendar">Calendar</a>
         <a href="#pyq">PYQs</a>
-        <a href="#notices">Notices</a>
+       
+
     </nav>
 
     <main id="home">
@@ -173,25 +175,42 @@ button:hover {
     View Notices
 </button>
         </div>
+        <div class="card" id="holiday-calendar">
+    <h3>📅 BEU Holiday Calendar</h3>
+    <p>Check upcoming holidays and important academic dates.</p>
+    <p>Official holiday dates will be updated after verification.</p>
+    <p>
+    <a href="https://beu-bih.ac.in/" target="_blank">
+        Official Holiday Calendar
+    </a>
+</p>
+
+<p>
+    <a href="https://beu-bih.ac.in/examination/examination-schedule"
+       target="_blank">
+        Check Exam Schedule
+    </a>
+</p>
+</div>
     </main>
 
     <footer>
         © 2026 College Dost | Made for Students
     </footer>
-    <script>
- function searchMaterial() {
+   <script>
+function searchMaterial() {
     const searchText = document.getElementById("searchBox").value
         .toLowerCase()
         .trim();
 
     const cards = document.querySelectorAll("main .card");
-    let found = false;
+    let matchedCard = null;
 
     cards.forEach(function(card) {
         const cardText = card.innerText.toLowerCase();
 
         if (searchText !== "" && cardText.includes(searchText)) {
-            found = true;
+            matchedCard = card;
         }
     });
 
@@ -199,21 +218,12 @@ button:hover {
 
     if (searchText === "") {
         message.textContent = "Please enter something to search.";
-    } else if (found) {
+    } else if (matchedCard) {
         message.textContent = "Matching study section found!";
-    } else {
-        message.textContent = "No matching section found yet.";
-    }
-}
-        
-    });
-
-    const message = document.getElementById("searchMessage");
-
-    if (searchText === "") {
-        message.textContent = "Please enter something to search.";
-    } else if (found) {
-        message.textContent = "Matching study section found!";
+        matchedCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
     } else {
         message.textContent = "No matching section found yet.";
     }
