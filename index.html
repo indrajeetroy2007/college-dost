@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Dost</title>
-
+    <title>Our Studywave | Student Learning Platform</title>
+    <meta name="description" content="our studywave is a student learning platform offering college notes,previous year question papers, exam updates and academic resources in one place.">
     <style>
         body {
             margin: 0;
@@ -103,8 +103,8 @@ button:hover {
 
 <body>
     <header>
-        <h1>College Dost 🎓</h1>
-        <p>Your college life, made easier.</p>
+        <h1>Our Studywave 🎓</h1>
+        <p>Learn Together. Grow Together.</p>
     </header>
 
     <nav>
@@ -127,8 +127,8 @@ button:hover {
     <button onclick="searchMaterial()">Search</button>
     <p id="searchMessage"></p>
 </div>
-        <h2>Welcome to College Dost!</h2>
-        <p>Your one-stop place for college study resources.</p>
+        <h2>Welcome to our studywave!</h2>
+        <p>Your one-stop place for college notes,PYQs and academic updates.</p>
         <div class="card">
     <h3>🎓 Select Your College</h3>
 
@@ -201,10 +201,34 @@ button:hover {
     </a>
 </p>
 </div>
+<!-- Feedback Section -->
+<div class="card" id="feedback">
+    <h2>💬 Student Feedback</h2>
+    <p>Help us improve College Dost. Share your suggestions.</p>
+
+    <form id="feedback-form">
+        <label for="feedback-type">Feedback Type</label>
+        <select id="feedback-type" required>
+            <option value="">Select an option</option>
+            <option>Suggestion</option>
+            <option>Website Problem</option>
+            <option>New Feature Request</option>
+        </select>
+
+        <label for="feedback-message">Your Message</label>
+        <textarea id="feedback-message"
+            placeholder="Write your feedback here..."
+            required></textarea>
+
+        <button type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfGIoGpFpgez_-1AxEdHobi5iOmkolOP0gGRNzQSiP8c3ud2Q/viewform?usp=dialog', '_blank')">
+    Submit Feedback
+</button>
+    </form>
+</div>
     </main>
 
     <footer>
-        © 2026 College Dost | Made for Students
+        © 2026 Our Studywave | Made for Students
     </footer>
    <script>
 function searchMaterial() {
@@ -243,7 +267,7 @@ function searchMaterial() {
     <img
      src="https://indrajeetroy2007.github.io/college-dost/profile.jpg"alt="indrajeetkumar"><h2>About the Developer</h2>
     <h3>Indrajeet Kumar</h3>
-    <p>Founder & Developer – College Dost</p>
+    <p>Founder & Developer – Our studywave</p>
     <p>Building a better learning experience for students.</p>
     <a href="https://github.com/indrajeetroy2007"
     target="_blank"
