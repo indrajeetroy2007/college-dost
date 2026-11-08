@@ -9,85 +9,111 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f1f5f9;
+            background: #f8fafc;
             color: #1e293b;
         }
 
         header {
-            background: #155eef;
+            background: linear-gradient(135deg,#123b70, #2563eb);
             color: white;
-            padding: 22px;
+            padding: 35px 20px;
             text-align: center;
         }
 
         nav {
-            background: white;
-            padding: 15px;
+            background: #ffffff;
+            padding: 18px 10px;
             text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px #0f172a08;
         }
 
         nav a {
        
-            color: #155eef;
+            color: #123b70;
             text-decoration: none;
             margin: 0 12px;
             font-weight: bold;
+            transition: 0.3s ease;
+        }
+        nav a:hover
+         {
+            color: #2563eb;
+            text-decoration: under line;
+
         }
         select {
     width: 100%;
     max-width: 350px;
-    padding: 12px;
+    padding: 13px;
     margin-top: 10px;
     border: 1px solid #cbd5e1;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
-    background: white;
-    color: #1e293b;
+    background: #ffffff;
+    color: #123b70;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 select:focus {
-    outline: 2px solid #155eef;
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #2563eb20;
 }
 
 .card h3 {
-    color: #155eef;
+    color: #123b70;
+    font-size: 21px;
+    font-weight: 700;
 }
 button {
-    background: #155eef;
+    background: #123b70;
     color: white;
     border: none;
-    padding: 12px 22px;
-    border-radius: 8px;
+    padding: 13px 24px;
+    border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px #123b7020;
 }
 
 button:hover {
-    background: #1249bd;
+    background: #2563eb;
+    transform: translateY(-2px);
 }
 
         main {
-            max-width: 900px;
-            margin: 35px auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
             text-align: center;
         }
 
         .card {
-            background: white;
-            padding: 25px;
-            margin: 18px 0;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #00000010;
+            background: #ffffff;
+            padding: 28px;
+            margin: 20px 0;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px #123b7010;
+            transition: 0.3s ease;
+        }
+        .card:hover{
+            transform: translateY(-4px)
+            box-shadow:0 10px 25px #123b7020
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px 15px;
             color: #64748b;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+            font-size: 14px;
         }
         .developer img {
             width:120px;
@@ -178,12 +204,50 @@ button:hover {
         <div class="card">
     <h3>🎓 Select Your College</h3>
 
-    <select id="college">
-        <option value="">Choose your college</option>
-        <option value="gec-kaimur">GEC Kaimur</option>
-        <option value="other">Other College</option>
-    </select>
+   <select id="college">
+    <option value="">Choose your college</option>
 
+    <option value="mit-muzaffarpur">Muzaffarpur Institute of Technology</option>
+    <option value="gce-gaya">Gaya College of Engineering</option>
+    <option value="mce-motihari">Motihari College of Engineering</option>
+    <option value="nce-chandi">Nalanda College of Engineering</option>
+    <option value="sit-sitamarhi">Sitamarhi Institute of Technology</option>
+    <option value="dce-darbhanga">Darbhanga College of Engineering</option>
+    <option value="lnjpit-chapra">Lok Nayak Jai Prakash Institute of Technology</option>
+    <option value="bce-bhagalpur">Bhagalpur College of Engineering</option>
+    <option value="bpmce-madhepura">B.P. Mandal College of Engineering</option>
+    <option value="rrsdce-begusarai">Rashtrakavi Ramdhari Singh Dinkar College of Engineering</option>
+    <option value="kec-katihar">Katihar Engineering College</option>
+    <option value="sce-sasaram">Shershah Engineering College, Sasaram</option>
+    <option value="bce-bakhtiyarpur">Bakhtiyarpur College of Engineering</option>
+    <option value="supaul-ce">Supaul College of Engineering</option>
+    <option value="saharsa-ce">Saharsa College of Engineering</option>
+    <option value="purnea-ce">Purnea College of Engineering</option>
+    <option value="gec-vaishali">Government Engineering College, Vaishali</option>
+    <option value="gec-jamui">Government Engineering College, Jamui</option>
+    <option value="gec-banka">Government Engineering College, Banka</option>
+    <option value="gec-samastipur">Government Engineering College, Samastipur</option>
+    <option value="gec-west-champaran">Government Engineering College, West Champaran</option>
+    <option value="gec-madhubani">Government Engineering College, Madhubani</option>
+    <option value="gec-sheohar">Government Engineering College, Sheohar</option>
+    <option value="gec-nawada">Government Engineering College, Nawada</option>
+    <option value="gec-sheikhpura">Government Engineering College, Sheikhpura</option>
+    <option value="spnrec-araria">Shri Phanishwar Nath Renu Engineering College, Araria</option>
+    <option value="gec-khagaria">Government Engineering College, Khagaria</option>
+    <option value="gec-aurangabad">Government Engineering College, Aurangabad</option>
+    <option value="gec-jehanabad">Government Engineering College, Jehanabad</option>
+    <option value="gec-arwal">Government Engineering College, Arwal</option>
+    <option value="gec-gopalganj">Government Engineering College, Gopalganj</option>
+    <option value="gec-siwan">Government Engineering College, Siwan</option>
+    <option value="gec-kaimur">Government Engineering College, Kaimur</option>
+    <option value="gec-kishanganj">Government Engineering College, Kishanganj</option>
+    <option value="gec-buxar">Government Engineering College, Buxar</option>
+    <option value="gec-bhojpur">Government Engineering College, Bhojpur</option>
+    <option value="gec-lakhisarai">Government Engineering College, Lakhisarai</option>
+    <option value="gec-munger">Government Engineering College, Munger</option>
+
+    <option value="other">Other College</option>
+</select>
     <p>Select your college to get started!</p>
     <div class="card">
     <h3>📚 Select Your Semester</h3>
@@ -235,7 +299,7 @@ button:hover {
     <p>Check upcoming holidays and important academic dates.</p>
     <p>Official holiday dates will be updated after verification.</p>
     <p>
-    <a href="https://beu-bih.ac.in/" target="_blank">
+    <a href="https://beu-bih.ac.in/assets/static/doc/calandar%202026.pdf" target="_blank"></a>
         Official Holiday Calendar
     </a>
 </p>
