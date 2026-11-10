@@ -9,49 +9,99 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
+            background: #f5f1e7;
+            color: #29291f;
         }
 
-        header {
-            background: linear-gradient(135deg,#123b70, #2563eb);
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
+       header {
+    background: #172f2a;
+    color: #f4ebdd;
+    padding: 45px 35px;
+    text-align: left;
+    border-bottom: 4px solid #d9b879;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 12px;
+    color:#f4ebdd;
+}
+
+header p {
+    color: #d9b879;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.brand-logo {
+    font-size: 48px;
+    background: #f4ebdd;
+    padding: 12px;
+border-radius: 15px;
+}
+.brand-text h1{
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 38px;
+}
+.brand-text p{
+    margin: 8px 0 0;
+}
 
         nav {
-            background: #ffffff;
-            padding: 18px 10px;
-            text-align: center;
-            border-bottom: 1px solid #e2e8f0;
-            box-shadow: 0 4px 12px #0f172a08;
+            background: #172f2a;
+            padding: 18px 25px;
+            text-align: left;
+            border-bottom: 1px solid #d9b879;
+            box-shadow: 0 3px 12px #172f2a12;
         }
 
         nav a {
        
-            color: #123b70;
+            color: #f4ebdd;
             text-decoration: none;
+            margin-right: 22px;
             margin: 0 12px;
             font-weight: bold;
             transition: 0.3s ease;
         }
         nav a:hover
          {
-            color: #2563eb;
+            color: #d9b879;
+            text-decoration: none;
             text-decoration: under line;
 
+        }
+        input[type="text"]{
+            width:65%;
+            max-width:420px;
+            padding: 14px;
+            border: 1px solid #d8c9a8;
+            border-radius: 10px;
+            background: #fffdf7;
+            color: #172f2a;
+            font-size: 15px;
+            outline: none;
+        }
+        input[type="text"]:focus{
+            border-color: #b38b4e;
+            box-shadow: 0 0 0 3px #d9b87930;
         }
         select {
     width: 100%;
     max-width: 350px;
     padding: 13px;
     margin-top: 10px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #d8c9a8;
     border-radius: 10px;
     font-size: 16px;
     background: #ffffff;
-    color: #123b70;
+    color: #172f2a;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -63,13 +113,14 @@ select:focus {
 }
 
 .card h3 {
-    color: #123b70;
+    color: #172f2a;
+    letter-spacing:0.4px;
     font-size: 21px;
     font-weight: 700;
 }
 button {
-    background: #123b70;
-    color: white;
+    background: #354332;
+    color: #ffffff;
     border: none;
     padding: 13px 24px;
     border-radius: 10px;
@@ -82,28 +133,44 @@ button {
 }
 
 button:hover {
-    background: #2563eb;
+    background: #52664b;
     transform: translateY(-2px);
 }
 
         main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 25px;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 30px;
             text-align: center;
         }
+        main > h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    color: #354332;
+    text-align: left;
+    margin-top: 30px;
+}
+
+main > p {
+    text-align: left;
+    color: #77715f;
+    line-height: 1.6;
+}
 
         .card {
-            background: #ffffff;
-            padding: 28px;
-            margin: 20px 0;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px #123b7010;
+            background: #fffdf7;
+            padding: 30px;
+            margin: 24px 0;
+            border-radius: 14px;
+            border: 1px solid #e5dcc7;
+            border-left: 4px solid #d9b879;
+            box-shadow: 0 8px 24px #172f2a12;
             transition: 0.3s ease;
         }
         .card:hover{
-            transform: translateY(-4px)
-            box-shadow:0 10px 25px #123b7020
+            transform: translateY(-4px);
+            box-shadow:0 10px 25px #29291f20;
         }
 
         footer {
@@ -175,8 +242,13 @@ button:hover {
 
 <body>
     <header>
-        <h1>Our Studywave 🎓</h1>
-        <p>Learn Together. Grow Together.</p>
+       <div class="brand">
+<div class="brand-logo"></div>
+<div class="brand-text">
+    <h1>Our Studywave</h1>
+    <p>Learn Together. Grow Together.</p>
+    </div>
+       </div>
     </header>
 
     <nav>
@@ -199,8 +271,8 @@ button:hover {
     <button onclick="searchMaterial()">Search</button>
     <p id="searchMessage"></p>
 </div>
-        <h2>Welcome to our studywave!</h2>
-        <p>Your one-stop place for college notes,PYQs and academic updates.</p>
+        <h2>Welcome to Our StudyWave</h2>
+        <p>Discover notes, previous year papers,syllabus and academic update - all in one place.</p>
         <div class="card">
     <h3>🎓 Select Your College</h3>
 
